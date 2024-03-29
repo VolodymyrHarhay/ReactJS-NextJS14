@@ -1,17 +1,18 @@
-import { Inter } from "next/font/google";
-import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
+import MainHeader from '@/components/main-header/main-header';
+import './globals.css';
 
 export const metadata = {
-  title: "My_App",
-  description: "Reacr.js + Next.js",
+  title: 'React + Next.js app',
+  description: 'React + Next.js app.',
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body>
+        <MainHeader />
+        {children}
+      </body>
     </html>
   );
 }
